@@ -47,5 +47,5 @@
 + `216.dark`
 
 ## Depend 
-* `Node` (JSLint, Beautify)
+* `Node` (Linter, Beautify)
 * `JRE` (Compressor)
