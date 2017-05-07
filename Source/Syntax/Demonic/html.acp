@@ -1,0 +1,192 @@
+#title=HTML
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is a custom auto-completion file for HTML.
+
+; Author: Demon
+; E-mail: rubo.lin@qq.com
+#case=y
+
+; [ Elements List/标签列表 ]
+
+; Head/头部信息
+#T=link:icon
+<link rel="icon" type="image/x-icon" href="^!" />
+#T=link:rss
+<link rel="alternate" type="application/rss+xml" href="^!" />
+#T=link:atom
+<link rel="alternate" type="application/atom+xml" href="^!" />
+#T=link:css
+<link rel="stylesheet" type="text/css" href="^!.css" />
+#T=css
+<style type="text/css">
+	^!
+</style>
+#T=js
+<script>
+	^!
+</script>
+#T=js:src
+<script src="^!" charset="utf-8"></script>
+#T=meta:viewport
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+#
+
+; Input/输入
+#T=input
+<input type="text" name="^!" />
+#T=input:pw
+<input type="password" name="^!" />
+#T=input:search
+<input type="search" name="^!" />
+#T=input:email
+<input type="email" name="^!" />
+#T=input:tel
+<input type="tel" name="^!" />
+#T=input:h
+<input type="hidden" name="^!" value="" />
+#T=input:check
+<input type="checkbox" name="^!" value="" />
+#T=input:radio
+<input type="radio" name="^!" value="" />
+#T=input:range
+<input type="range" name="^!" />
+#T=input:file
+<input type="file" name="^!" />
+#T=input:button
+<input type="button" name="^!" />
+#T=input:reset
+<input type="reset" name="^!" />
+#T=input:submit
+<input type="submit" name="^!" />
+#T=button
+<button type="button">^!</button>
+#T=button:reset
+<button type="reset">^!</button>
+#T=button:submit
+<button type="submit">^!</button>
+#T=select
+<select>
+	<option value="" selected="selected">^!</option>
+	<option value=""></option>
+</select>
+#T=optg
+<optgroup label="">
+	<option value="">^!</option>
+</optgroup>
+#
+
+; Table/表格
+#T=table
+<table border="" cellpadding="" cellspacing="" summary="">
+	<caption></caption>
+	<colgroup>
+		<col id="" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+		</tr>
+	</tfoot>
+</table>
+#T=colg
+<colgroup>
+	<col id="^!" />
+</colgroup>
+#T=thead
+<thead>
+	<tr><th>^!</th></tr>
+</thead>
+#T=tbody
+<tbody>
+	<tr><td>^!</td></tr>
+</tbody>
+#T=tfoot
+<tfoot>
+	<tr><td>^!</td></tr>
+</tfoot>
+#
+
+; List/列表
+#T=ul
+<ul>
+	<li>^!</li>
+</ul>
+#T=ol
+<ol>
+	<li>^!</li>
+</ol>
+#T=dl
+<dl>
+	<dt>^!</dt>
+	<dd>^!</dd>
+</dl>
+#
+
+; Quote/引用
+#T=bq
+<blockquote>^!</blockquote>
+#
+
+; Contact/联系方式
+#T=add
+<address>^!</address>
+#
+
+; Characters Format/字符格式化
+#T=ins
+<ins datetime="" cite="">^!</ins>
+#T=del
+<del datetime="" cite="">^!</del>
+#T=acr
+<acronym title="">^!</acronym>
+#
+
+
+
+
+; [ Standard Attributes/标准属性 ]
+
+; Core Attributes/核心属性
+#T=class
+class="^!"
+#T=id
+id="^!"
+#T=style
+style="^!"
+#T=title
+title="^!"
+#T=data
+data-^!=""
+#
+
+; Language Attributes/语言属性
+#T=dir
+dir="^!"
+#T=lang
+lang="^!"
+#
+
+; Keyboard Attributes/键盘属性
+#T=accesskey
+accesskey="^!"
+#T=tabindex
+tabindex="^!"
+#
+
+
+
+
+; [ Custom/自定义 ]
+#t=--
+<!-- ^! -->
+#

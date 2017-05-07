@@ -1,0 +1,204 @@
+#title=JavaScript
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is a custom auto-completion file for JavaScript.
+
+; Author: Demon
+; E-mail: rubo.lin@qq.com
+#case=y
+
+; [ ECMAScript Core ]
+
+; Statement
+#T=var
+var ^!;
+#T=function
+function ^!() {
+}
+#T=if
+if (^!) {
+	
+}
+#T=ifel
+if (^!) {
+	
+} else {
+	
+}
+#T=el
+ else {
+	^!
+}
+#T=elif
+ else if (^!) {
+	
+}
+#T=switch
+switch (^!) {
+case :
+	break;
+case :
+	break;
+default:
+}
+#T=case
+case ^!:
+	break;
+#T=default
+default:
+	^!
+#T=while
+while (^!) {
+	
+}
+#T=do
+do {
+	^!
+} while ();
+#T=for
+for (^!) {
+	
+}
+#T=forin
+for (^! in ) {
+	
+}
+#T=break
+break ^!;
+#T=cont
+continue ^!;
+#T=return
+return ^!;
+#T=throw
+throw {
+	name: ^!,
+	message: 
+};
+#T=try
+try {
+	^!
+} catch (e) {
+
+}
+#T=tryf
+try {
+	^!
+} catch (e) {
+	
+} finally {
+	
+}
+#T=us
+'use strict';
+#
+
+; Propertys
+#T=arg
+arguments
+#T=und
+undefined
+#T=len
+length
+#T=pt
+prototype
+#T=cons
+constructor
+#T=decode
+decodeURI(^!)
+#T=decodec
+decodeURIComponent(^!)
+#T=encode
+encodeURI(^!)
+#T=encodec
+encodeURIComponent(^!)
+#T=hasOwn
+hasOwnProperty(^!)
+#
+
+
+; [ Browser Object Model ]
+#T=setInt
+setInterval(^!)
+#T=setTime
+setTimeout(^!)
+#T=clearInt
+clearInterval(^!)
+#T=clearTime
+clearTimeout(^!)
+#T=log
+console.log(^!)
+#
+
+
+; [ Document Object Model ]
+#T=addEvent
+addEventListener(^!)
+#T=removeEvent
+removeEventListener(^!)
+#T=attEvent
+attachEvent(^!)
+#T=detEvent
+detachEvent(^!)
+#T=doc
+document
+#T=getid
+getElementById('^!')
+#T=gettag
+getElementsByTagName('^!')
+#T=getname
+getElementsByName('^!')
+#T=getclass
+getElementsByClassName('^!')
+#T=query
+querySelector('^!')
+#T=queryAll
+querySelectorAll('^!')
+#T=write
+document.write(^!)
+#
+
+
+; [ Custom/自定义 ]
+
+; JSLint
+#T=jslint
+/*jslint
+	browser: true, devel: true, sloppy: true, nomen: true, regexp: true
+*/
+/*global */
+#
+
+; jQuery
+#T=jq
+$(^!)
+#T=ajax
+$.ajax({
+	url: '^!',
+	type: 'GET',
+	data: '',
+	cache: false,
+	async: true,
+	dataType: 'json',
+	error: function () {
+	},
+	success: function (data) {
+	}
+});
+#T=jsonp
+$.ajax({
+	url: '^!',
+	type: 'GET',
+	data: '',
+	cache: false,
+	async: true,
+	dataType: 'jsonp',
+	jsonp: 'jsonpcallback',
+	error: function () {
+	},
+	success : function (data) {
+	}
+});
+#T=each
+$.each(^!, function () {
+	
+});
+#

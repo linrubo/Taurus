@@ -1,0 +1,150 @@
+#title=Cascading Style Sheet
+; EditPlus Auto-completion file v1.0 written by ES-Computing.
+; This file is a custom auto-completion file for CSS.
+
+; Author: Demon
+; E-mail: rubo.lin@qq.com
+#case=y
+
+; [ Properties/属性 ]
+; Font/字体
+#T=fsn
+font-style: normal;
+#T=fsi
+font-style: italic;
+#T=fso
+font-style: oblique;
+#T=fwo
+font-weight: normal;
+#T=fwb
+font-weight: bold;
+#
+
+; Text/文本
+#T=tal
+text-align: left;
+#T=tar
+text-align: right;
+#T=tac
+text-align: center;
+#T=tdn
+text-decoration: none;
+#T=tdu
+text-decoration: underline;
+#T=tdl
+text-decoration: line-through;
+#T=tdo
+text-decoration: overline;
+#T=toc
+text-overflow: clip;
+#T=toe
+text-overflow: ellipsis;
+#T=ttn
+text-transform: none;
+#T=ttc
+text-transform: capitalize;
+#T=ttu
+text-transform: uppercase;
+#T=ttl
+text-transform: lowercase;
+#T=lho
+line-height: normal;
+#
+
+; Background/背景
+#T=bgi
+background-image: url(^!);
+#
+
+; Positioning/定位
+#T=pab
+position: absolute;
+#T=pre
+position: relative;
+#T=ps
+position: static;
+#T=pf
+position: fixed;
+#T=zi
+z-index: ^!;
+#
+
+; Dimensions/尺寸
+#T=h
+height: ^!;
+#T=w
+width: ^!;
+#
+
+; Layout/布局
+#T=cl
+clear: left;
+#T=cr
+clear: right;
+#T=cb
+clear: both;
+#T=db
+display: block;
+#T=di
+display: inline;
+#T=dn
+display: none;
+#T=dib
+display: inline-block;
+#T=fl
+float: left;
+#T=fr
+float: right;
+#T=fn
+float: none;
+#
+
+; Margins/外补丁
+#T=mt
+margin-top: ^!;
+#T=mr
+margin-right: ^!;
+#T=mb
+margin-bottom: ^!;
+#T=ml
+margin-left: ^!;
+#
+
+;Borders/边框
+#T=br
+border-radius: ^!;
+#
+
+; Paddings/内补丁
+#T=pt
+padding-top: ^!;
+#T=pr
+padding-right: ^!;
+#T=pb
+padding-bottom: ^!;
+#T=pl
+padding-left: ^!;
+#
+
+; Lists/列表
+#T=ls
+list-style: ^!;
+#
+
+; Other/其他
+#T=cd
+cursor: default;
+#T=cp
+cursor: pointer;
+#
+
+
+
+; [ Declaration/声明 ]
+#T=!
+!important
+#
+
+
+
+; [ Custom/自定义 ]
