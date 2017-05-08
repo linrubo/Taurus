@@ -29,7 +29,7 @@
 * User tools
     + `Beautify`
     + `Compressor`
-    + `JSLint`
+    + `Linter`
 * Toolbar-User
 	+ `Line Comment Indent`
 	+ `Line Uncomment`
