@@ -1,11 +1,9 @@
 @cls & echo off
 echo.
-echo Compressor for EditPlus 1.7.507
-
-set LogPath=%UserProfile%\.EditPlus\Logger
+echo Compressor for EditPlus 1.7.509
 
 REM 检查 Java 环境
-echo %path% | find "java" > %LogPath%\Compressor.log
+echo %path% | find "java" > %~dp0Compressor.log
 if %errorlevel% NEQ 0 (
     echo.
     echo 请先安装 JDK/JRE Java环境!
@@ -27,7 +25,7 @@ REM 压缩后的文件名规则：
 REM 1.文件名有 .source 时：filename.source.js -> filename.js
 REM 2.其他情况：filename.js -> filename.min.js
 set filename=%~n1.min%~x1
-echo %~nx1 | find ".source." >> %LogPath%\Compressor.log
+echo %~nx1 | find ".source." >> %~dp0Compressor.log
 if %errorlevel% == 0 (
     for %%a in ("%~n1") do (
         set filename=%%~na%~x1
@@ -35,9 +33,9 @@ if %errorlevel% == 0 (
 )
 
 REM 压缩过程
-echo 当前目录: %cd% >> %LogPath%\Compressor.log
-echo 正在压缩 %1 ... >> %LogPath%\Compressor.log
-echo java -jar %~dp0Compressor.jar %1 -o "%~dp1%filename%" >> %LogPath%\Compressor.log
+echo 当前目录: %cd% >> %~dp0Compressor.log
+echo 正在压缩 %1 ... >> %~dp0Compressor.log
+echo java -jar %~dp0Compressor.jar %1 -o "%~dp1%filename%" >> %~dp0Compressor.log
 java -jar %~dp0Compressor.jar %1 -o "%~dp1%filename%"
 
 REM 压缩结果

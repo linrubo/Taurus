@@ -4,11 +4,6 @@ title Taurus installer
 
 cd %~dp0
 
-REM 创建日志文件夹
-
-md Logger
-
-
 REM 注册表导入
 
 reg import Install.reg
@@ -26,7 +21,7 @@ if %errorlevel% NEQ 0 (
 
 REM 第一次执行检测
 
-reg query "HKCU\Software\ES-Computing\EditPlus\Install" /v "First Run" | find "0x0" > Logger\Install.log
+reg query "HKCU\Software\ES-Computing\EditPlus\Install" /v "First Run" | find "0x0" > Install.log
 
 if %errorlevel% NEQ 1 (
     goto Import

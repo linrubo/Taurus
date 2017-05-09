@@ -1,11 +1,9 @@
 @cls & echo off
 echo.
-echo JSLint for EditPlus 1.7.507
-
-set LogPath=%UserProfile%\.EditPlus\Logger
+echo JSLint for EditPlus 1.7.509
 
 REM 检查 Node.js 环境
-echo %path% | find "NodeJS" > %LogPath%\Linter.log
+echo %path% | find "NodeJS" > %~dp0Linter.log
 if %errorlevel% NEQ 0 (
     echo.
     echo 请先安装 Node.js 环境!
@@ -22,8 +20,8 @@ if "%~x1" NEQ ".js" (
 )
 
 REM 检测过程
-echo 当前目录: %cd% >> %LogPath%\Linter.log
-echo 当前文件: %1 >> %LogPath%\Linter.log
+echo 当前目录: %cd% >> %~dp0Linter.log
+echo 当前文件: %1 >> %~dp0Linter.log
 echo Linting ...
 node %~dp0Linter.js %1
 
