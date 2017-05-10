@@ -4,5 +4,5 @@
 * JSLint rename to Linter
 * Modify the log file path
 
-# 1.7.507
+## 1.7.507
 * First release
