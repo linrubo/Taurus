@@ -1,6 +1,5 @@
 @cls & echo off
 echo.
-echo Compressor for EditPlus 1.7.509
 
 REM 检查 Java 环境
 echo %path% | find "java" > %~dp0Compressor.log
@@ -43,7 +42,7 @@ if %errorlevel% == 0 (
     echo.
     echo 压缩文件 %~nx1 到 %filename% 完成!
     echo.
-    echo Power by  YUI Compressor 2.4.7
+    echo Powered by  YUI Compressor 2.4.7
 )
 
 :End
