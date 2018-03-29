@@ -30,6 +30,9 @@
     + `Beautify`
     + `Compressor`
     + `Linter`
+    + `Compare`
+    + `Dictionary`
+    + `Translator`
 * Toolbar-User
 	+ `Line Comment Indent`
 	+ `Line Uncomment`
