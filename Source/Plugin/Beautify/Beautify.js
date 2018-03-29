@@ -1,8 +1,4 @@
-/*jslint
-    node: true
-*/
-
-// Power by js-beautify 1.6.3(Jun 9, 2016)
+// Powered by js-beautify 1.7.5(8 Dec 2017)
 
 'use strict';
 
