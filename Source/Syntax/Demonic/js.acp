@@ -162,7 +162,7 @@ document.write(^!)
 ; JSLint
 #T=jslint
 /*jslint
-	browser: true, devel: true, sloppy: true, nomen: true, regexp: true
+	browser: true, node: true, devel: true, multivar: true, single: true
 */
 /*global */
 #

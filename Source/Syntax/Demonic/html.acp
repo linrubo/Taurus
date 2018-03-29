@@ -17,6 +17,8 @@
 <link rel="alternate" type="application/atom+xml" href="^!" />
 #T=link:css
 <link rel="stylesheet" type="text/css" href="^!.css" />
+#T=link:dns
+<link rel="dns-prefetch" href="^!" />
 #T=css
 <style type="text/css">
 	^!
@@ -27,8 +29,10 @@
 </script>
 #T=js:src
 <script src="^!" charset="utf-8"></script>
+#T=js:tpl
+<script type="text/template" id="^!"></script>
 #T=meta:viewport
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 #
 
 ; Input/输入
