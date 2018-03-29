@@ -1,17 +1,10 @@
-/*jslint
-    node: true
-*/
+// Powered by JSLint(2018-03-21)
 
 var filepath = process.argv[2];
 var fs = require('fs');
-var jslint = require('./jslint.js').jslint;
-var option = {
-    browser: true,
-    devel: true,
-    sloppy: true,
-    nomen: true,
-    regexp: true
-};
+var jslint = require('./JSLint.js').jslint;
+var option = require('./Option.js').option;
+
 var report = function (data) {
 	'use strict';
     var output = [],
@@ -30,7 +23,7 @@ var report = function (data) {
         warnings.forEach(function (warning, index) {
             var template = "{index}. {message}  >>> in [line: {line}, column: {column}]\n",
 				pattern = /\{([^{}]*)\}/g,
-				displace = function (match, name) {
+				replacement = function (match, name) {
 					var reserve = {
 						message: '',
 						line: 0,
@@ -41,7 +34,7 @@ var report = function (data) {
             if (warning) {
 				warning.line += 1;
                 warning.index = index + 1;
-                output.push(indent + template.replace(pattern, displace));
+                output.push(indent + template.replace(pattern, replacement));
             }
         });
     } else {
@@ -57,7 +50,7 @@ var report = function (data) {
         output.push("\nNo new global variables introduced.\n");
     }
 
-	output.push('\nJSLint edition: ' + data.edition);
+	output.push('\nPowered by JSLint ' + data.edition);
     return output.join('');
 };
 

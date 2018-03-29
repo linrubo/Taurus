@@ -1,6 +1,5 @@
 @cls & echo off
 echo.
-echo JSLint for EditPlus 1.7.509
 
 REM ¼ì²é Node.js »·¾³
 echo %path% | find "NodeJS" > %~dp0Linter.log
