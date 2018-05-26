@@ -58,13 +58,15 @@ const
 export
 extends
 import
+let
+static
 super
 yield
+; ES8
+await
 ; Future Reserved Word
 ; ES1
 enum
-; ES6
-await
 ; Strict Mode
 implements
 interface
@@ -89,7 +91,6 @@ true
 ;long
 ;native
 ;short
-;static
 ;synchronized
 ;throws
 ;transient
