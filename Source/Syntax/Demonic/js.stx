@@ -5,7 +5,7 @@
 ; Author: Demon
 ; E-mail: rubo.lin@qq.com
 
-#DELIMITER=,(){}[]-+*%/\="'~!&|<>?:;.
+#DELIMITER=,(){}[]-+*%/\="'~!&|<>?:;.`
 #QUOTATION1='
 #QUOTATION2="
 #QUOTATION3=/
@@ -14,9 +14,12 @@
 #LINECOMMENT2=
 #COMMENTON=/*
 #COMMENTOFF=*/
+#COMMENTON2=`
+#COMMENTOFF2=`
 #ESCAPE=\
 #CASE=y
 #NUMBER_PATTERN=cpp
+#SPECIAL_STX=js
 
 #KEYWORD=Reserved Words
 ; Keywords
