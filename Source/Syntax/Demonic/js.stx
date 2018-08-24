@@ -97,23 +97,49 @@ true
 ;volatile
 
 #KEYWORD=Build-in Object
+; ES1
 Array
 Boolean
 Date
-Error
-EvalError
 Function
-JSON
 Math
 Number
 Object
+String
+; ES3
+Error
+EvalError
 RangeError
 ReferenceError
 RegExp
-String
 SyntaxError
 TypeError
 URIError
+; ES5
+JSON
+; ES6
+ArrayBuffer
+DataView
+Float32Array
+Float64Array
+Int16Array
+Int32Array
+Int8Array
+Map
+Promise
+Proxy
+Reflect
+Set
+Symbol
+Uint16Array
+Uint32Array
+Uint8Array
+Uint8ClampedArray
+WeakMap
+WeakSet
+; ES8
+Atomics
+SharedArrayBuffer
 
 #KEYWORD=ECMA Properties
 ; Arguments
