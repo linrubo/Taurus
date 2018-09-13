@@ -1,65 +1,65 @@
 // Powered by JSLint(2018-03-21)
 
-var filepath = process.argv[2];
-var fs = require('fs');
-var jslint = require('./JSLint.js').jslint;
-var option = require('./Option.js').option;
+'use strict';
 
-var report = function (data) {
-	'use strict';
-    var output = [],
+const fs = require('fs');
+const jslint = require('./JSLint.js').jslint;
+
+const filepath = process.argv[2];
+const option = {
+    browser: true,
+	node: true,
+    devel: true,
+    multivar: true,
+	single: true
+};
+
+const report = function (data) {
+    let output = [],
         indent = '    ',
 		warnings = data.warnings,
-		global = Object.keys(data.global.context).sort();
+		globals = Object.keys(data.global.context).sort();
 
     if (warnings.length) {
         if (data.json) {
-            output.push('\nJSON: bad.\n');
+            output.push('\nJSON: bad.');
         }
 		if (data.stop) {
-			output.push('\nJSLint was unable to finish.\n');
+			output.push('\nJSLint was unable to finish.');
 		}
-        output.push('\nWarning:\n');
+        output.push('\nWarning:');
         warnings.forEach(function (warning, index) {
-            var template = "{index}. {message}  >>> in [line: {line}, column: {column}]\n",
-				pattern = /\{([^{}]*)\}/g,
-				replacement = function (match, name) {
-					var reserve = {
-						message: '',
-						line: 0,
-						column: 0
-					};
-					return warning[name] || reserve[name];
-				};
             if (warning) {
 				warning.line += 1;
                 warning.index = index + 1;
-                output.push(indent + template.replace(pattern, replacement));
+				output.push(indent + `${warning.index}. ${warning.message}  >>> in [line: ${warning.line}, column: ${warning.column}]`);
             }
         });
     } else {
         if (data.json) {
-            output.push("\nJSON: good.\n");
+            output.push("\nJSON: good.");
         }
     }
 
-    if (global.length) {
-        output.push('\nGlobal:\n');
-        output.push(indent + global.join(', ') + '\n');
+    if (globals.length) {
+        output.push('\nGlobal:');
+        output.push(indent + globals.join(', '));
     } else {
-        output.push("\nNo new global variables introduced.\n");
+        output.push("\nNo new global variables introduced.");
     }
 
 	output.push('\nPowered by JSLint ' + data.edition);
-    return output.join('');
+    return output.join('\n');
 };
 
 fs.readFile(filepath, 'utf8', function (err, data) {
-	'use strict';
-    var result = jslint(data, option);
-	var output = report(result);
-    console.log(output);
-    if (err) {
+	let result, output;
+
+	if (err) {
         throw err;
     }
+
+	result = jslint(data, option);
+	output = report(result);
+    console.log(output);
 });

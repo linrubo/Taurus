@@ -4,18 +4,14 @@ echo.
 REM 检查 Java 环境
 echo %path% | find "java" > %~dp0Compressor.log
 if %errorlevel% NEQ 0 (
-    echo.
     echo 请先安装 JDK/JRE Java环境!
-    echo.
     goto End
 )
 
 REM 过滤文件后缀，只压缩 JS/CSS
 if "%~x1" NEQ ".js" (
     if "%~x1" NEQ ".css" (
-        echo.
         echo 请选择 JS/CSS 文件!
-        echo.
         goto End
     )
 )
@@ -39,7 +35,6 @@ java -jar %~dp0Compressor.jar %1 -o "%~dp1%filename%"
 
 REM 压缩结果
 if %errorlevel% == 0 (
-    echo.
     echo 压缩文件 %~nx1 到 %filename% 完成!
     echo.
     echo Powered by  YUI Compressor 2.4.7

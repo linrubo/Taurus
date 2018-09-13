@@ -2,11 +2,11 @@
 
 'use strict';
 
-var query = process.argv[2];
-var http = require('http');
+const https = require('https');
 
-var pattern = /<div id="dict_ans"(.+)查看更多释义/;
-var parse = function (html) {
+const query = process.argv[2];
+const pattern = /<div id="dict_ans"(.+)查看更多释义/;
+const parse = function (html) {
 	var desc = html.match(pattern);
 	var result;
 
@@ -30,25 +30,41 @@ var parse = function (html) {
 	}
 };
 
-http.get('http://cn.bing.com/search?q=' + query, function (res) {
-	var rawData = '';
-	var locked = false;
+const options = {
+    hostname: 'cn.bing.com',
+    port: 443,
+    path: '/search?q=' + query,
+    method: 'GET',
+	headers: {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+		'Cookie': '_SS=SID=166D6B861FCF6B8A1E4660631EE16A20&HV=1525531982'
+	}
+};
+
+const request = https.request(options, (res) => {
+    let rawData = '';
+	let locked = false;
 
 	res.setEncoding('utf8');
 
-	res.on('data', function (chunk) {
+    res.on('data', (chunk) => {
 		rawData += chunk;
 		if (pattern.test(rawData) && locked === false) {
 			locked = true;
 			parse(rawData);
 			process.exit(0);
 		}
+    });
+
+	res.on('end', () => {
+		//console.log(rawData);
 	});
 
-	//res.on('end', function() {});
-
-	res.on('error', function () {
-		console.log(chalk.red('Failed to query'));
-		process.exit(0);
-	});
 });
+
+request.on('error', (e) => {
+    console.error(`problem with request: ${e.message}`);
+	process.exit(0);
+});
+
+request.end();
