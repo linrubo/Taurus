@@ -1,5 +1,13 @@
 # History
 
+## 1.8.1030
+* Update the js.stx file
+* Update the js.ctl file
+* Update all plug-in scripts
+* Update configuration of the plug-in
+* Add plugin [Minify, Prettify]
+* Update config files
+
 ## 1.8.329
 * Update beautify library version to 1.7.5
 * Update jslint library version to 2018-03-21;
