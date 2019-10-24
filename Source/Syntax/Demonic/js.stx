@@ -72,50 +72,53 @@ null
 false
 true
 
-#KEYWORD=Build-in Object
-; ES1
-Array
-Boolean
-Date
-Function
-Math
-Number
+#KEYWORD=Built-in objects
+; Fundamental Objects
 Object
-String
-; ES3
+Function
+Boolean
+Symbol
 Error
 EvalError
 RangeError
 ReferenceError
-RegExp
 SyntaxError
 TypeError
 URIError
-; ES5
-JSON
-; ES6
-ArrayBuffer
-DataView
+; Numbers and Dates
+Number
+Math
+Date
+; Text Processing
+String
+RegExp
+; Indexed Collections
+Array
 Float32Array
 Float64Array
 Int16Array
 Int32Array
 Int8Array
-Map
-Promise
-Proxy
-Reflect
-Set
-Symbol
 Uint16Array
 Uint32Array
 Uint8Array
 Uint8ClampedArray
+; Keyed Collections
+Map
+Set
 WeakMap
 WeakSet
-; ES8
-Atomics
+; Structured Data
+ArrayBuffer
 SharedArrayBuffer
+DataView
+Atomics
+JSON
+; Control Abstraction Objects
+Promise
+; Reflection
+Reflect
+Proxy
 
 #KEYWORD=ECMA Properties
 ; Global
