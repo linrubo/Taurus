@@ -23,51 +23,44 @@
 
 #KEYWORD=Reserved Words
 ; Keywords
-; ES1
+await
 break
+case
+catch
+class
+const
 continue
+debugger
+default
 delete
+do
 else
+export
+extends
+finally
 for
 function
 if
+import
 in
+instanceof
+let
 new
 return
+static
+super
+switch
 this
+throw
+try
 typeof
 var
 void
 while
 with
-; ES3
-case
-catch
-default
-do
-finally
-instanceof
-switch
-throw
-try
-; ES5
-debugger
-; ES6
-class
-const
-export
-extends
-import
-let
-static
-super
 yield
-; ES8
-await
 ; Future Reserved Word
-; ES1
 enum
-; Strict Mode
 implements
 interface
 package
@@ -78,23 +71,6 @@ public
 null
 false
 true
-; Outdated
-;abstract
-;boolean
-;byte
-;char
-;double
-;final
-;float
-;goto
-;int
-;long
-;native
-;short
-;synchronized
-;throws
-;transient
-;volatile
 
 #KEYWORD=Build-in Object
 ; ES1
