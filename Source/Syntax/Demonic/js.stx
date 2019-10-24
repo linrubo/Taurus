@@ -142,6 +142,7 @@ defineProperties
 defineProperty
 entries
 freeze
+fromEntries
 getOwnPropertyDescriptor
 getOwnPropertyDescriptors
 getOwnPropertyNames
@@ -171,9 +172,9 @@ apply
 bind
 call
 toString
+prototype
 length
 name
-prototype
 ; Boolean
 prototype
 constructor
@@ -182,11 +183,9 @@ valueOf
 ; Symbol
 prototype
 asyncIterator
-for
 hasInstance
 isConcatSpreadable
 iterator
-keyFor
 match
 replace
 search
@@ -195,7 +194,10 @@ split
 toPrimitive
 toStringTag
 unscopables
+for
+keyFor
 constructor
+description
 toString
 valueOf
 ; Error
@@ -273,9 +275,9 @@ tanh
 trunc
 ; Date
 prototype
-UTC
 now
 parse
+UTC
 constructor
 getDate
 getDay
@@ -352,6 +354,8 @@ toLowerCase
 toString
 toUpperCase
 trim
+trimEnd
+trimStart
 valueOf
 length
 ; RegExp
@@ -383,6 +387,8 @@ fill
 filter
 find
 findIndex
+flat
+flatMap
 forEach
 includes
 indexOf
@@ -406,10 +412,40 @@ unshift
 values
 length
 ; TypedArray
+BYTES_PER_ELEMENT
 prototype
-BYTES_PER_ELEMENT
+from
+of
 constructor
-BYTES_PER_ELEMENT
+buffer
+byteLength
+byteOffset
+length
+copyWithin
+entries
+every
+fill
+filter
+find
+findIndex
+forEach
+includes
+indexOf
+join
+keys
+lastIndexOf
+map
+reduce
+reduceRight
+reverse
+set
+slice
+some
+sort
+subarray
+toLocaleString
+toString
+values
 ; Map
 prototype
 constructor
@@ -492,7 +528,7 @@ or
 store
 sub
 wait
-wake
+notify
 xor
 ; JSON
 parse
@@ -531,10 +567,17 @@ revocable
 ; Arguments
 callee
 length
-; Compatibility
+; Obsolete
 escape
 unescape
+__proto__
+__defineGetter__
+__defineSetter__
+__lookupGetter__
+__lookupSetter__
 substr
+trimLeft
+trimRight
 getYear
 setYear
 toGMTString
