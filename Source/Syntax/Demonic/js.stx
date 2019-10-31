@@ -96,13 +96,13 @@ RegExp
 Array
 Float32Array
 Float64Array
+Int8Array
 Int16Array
 Int32Array
-Int8Array
-Uint16Array
-Uint32Array
 Uint8Array
 Uint8ClampedArray
+Uint16Array
+Uint32Array
 ; Keyed Collections
 Map
 Set
@@ -125,17 +125,16 @@ Proxy
 Infinity
 NaN
 undefined
-decodeURI
-decodeURIComponent
-encodeURI
-encodeURIComponent
 eval
 isFinite
 isNaN
 parseFloat
 parseInt
+decodeURI
+decodeURIComponent
+encodeURI
+encodeURIComponent
 ; Object
-prototype
 assign
 create
 defineProperties
@@ -165,27 +164,23 @@ toLocaleString
 toString
 valueOf
 ; Function
-prototype
-length
-constructor
 apply
 bind
 call
 toString
-prototype
 length
 name
-; Boolean
 prototype
-constructor
+; Boolean
 toString
 valueOf
 ; Symbol
-prototype
 asyncIterator
+for
 hasInstance
 isConcatSpreadable
 iterator
+keyFor
 match
 replace
 search
@@ -194,35 +189,28 @@ split
 toPrimitive
 toStringTag
 unscopables
-for
-keyFor
-constructor
 description
 toString
 valueOf
 ; Error
-prototype
-constructor
 message
 name
 toString
 ; Number
 EPSILON
-MAX_SAFE_INTEGER
-MAX_VALUE
-MIN_SAFE_INTEGER
-MIN_VALUE
-NEGATIVE_INFINITY
-NaN
-POSITIVE_INFINITY
-prototype
 isFinite
 isInteger
 isNaN
 isSafeInteger
 parseFloat
 parseInt
-constructor
+MAX_SAFE_INTEGER
+MAX_VALUE
+MIN_SAFE_INTEGER
+MIN_VALUE
+NaN
+NEGATIVE_INFINITY
+POSITIVE_INFINITY
 toExponential
 toFixed
 toLocaleString
@@ -258,8 +246,8 @@ fround
 hypot
 imul
 log
-log10
 log1p
+log10
 log2
 max
 min
@@ -274,11 +262,9 @@ tan
 tanh
 trunc
 ; Date
-prototype
 now
 parse
 UTC
-constructor
 getDate
 getDay
 getFullYear
@@ -323,11 +309,9 @@ toTimeString
 toUTCString
 valueOf
 ; String
-prototype
 fromCharCode
 fromCodePoint
 raw
-constructor
 charAt
 charCodeAt
 codePointAt
@@ -359,8 +343,7 @@ trimStart
 valueOf
 length
 ; RegExp
-prototype
-constructor
+exec
 dotAll
 flags
 global
@@ -368,17 +351,14 @@ ignoreCase
 multiline
 source
 sticky
-unicode
-exec
 test
 toString
+unicode
 lastIndex
 ; Array
-prototype
 from
 isArray
 of
-constructor
 concat
 copyWithin
 entries
@@ -413,43 +393,8 @@ values
 length
 ; TypedArray
 BYTES_PER_ELEMENT
-prototype
-from
-of
-constructor
-buffer
-byteLength
-byteOffset
-length
-copyWithin
-entries
-every
-fill
-filter
-find
-findIndex
-forEach
-includes
-indexOf
-join
-keys
-lastIndexOf
-map
-reduce
-reduceRight
-reverse
-set
-slice
-some
-sort
 subarray
-toLocaleString
-toString
-values
 ; Map
-prototype
-constructor
-size
 clear
 delete
 entries
@@ -458,11 +403,9 @@ get
 has
 keys
 set
+size
 values
 ; Set
-prototype
-constructor
-size
 add
 clear
 delete
@@ -470,34 +413,25 @@ entries
 forEach
 has
 keys
+size
 values
 ; WeakMap
-prototype
-constructor
 delete
 get
 has
 set
 ; WeakSet
-prototype
-constructor
 add
 delete
 has
 ; ArrayBuffer
-prototype
 isView
-constructor
 byteLength
 slice
 ; SharedArrayBuffer
-prototype
-constructor
 byteLength
 slice
 ; DataView
-prototype
-constructor
 buffer
 byteLength
 byteOffset
@@ -534,17 +468,14 @@ xor
 parse
 stringify
 ; Generator
-constructor
 next
 return
 throw
 ; Promise
-prototype
 all
 race
 reject
 resolve
-constructor
 catch
 finally
 then
@@ -1396,7 +1327,7 @@ getModifierState
 ; CompositionEvent
 data
 ; ==== Extensions ====
-; Document in [HTML]
+; HTMLDocument in [HTML]
 location
 domain
 referrer
@@ -1430,7 +1361,7 @@ queryCommandIndeterm
 queryCommandState
 queryCommandSupported
 queryCommandValue
-; Element in [HTML]
+; HTMLElement in [HTML]
 title
 lang
 translate
@@ -1653,7 +1584,7 @@ credentials
 mediaDevices
 storage
 requestMediaKeySystemAccess
-; Screen
+; ==== Screen ====
 availWidth
 availHeight
 width
