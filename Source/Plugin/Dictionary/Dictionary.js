@@ -7,8 +7,8 @@ const https = require('https');
 const query = process.argv[2];
 const pattern = /<div id="dict_ans"(.+)查看更多释义/;
 const parse = function (html) {
-	var desc = html.match(pattern);
-	var result;
+	let desc = html.match(pattern);
+	let result;
 
 	if (desc && desc[0]) {
 		// 过滤掉非div元素
