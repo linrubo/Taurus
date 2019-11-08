@@ -1,4 +1,4 @@
-// Powered by js-beautify 1.7.5(8 Dec 2017)
+// Powered by js-beautify@1.10.2
 
 'use strict';
 
@@ -19,6 +19,7 @@ const beautify = function (data) {
 	let result;
 
 	switch (extname) {
+	case '.json':
 	case '.js':
 		result = js_beautify(data, option);
 		break;
