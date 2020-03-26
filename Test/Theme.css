@@ -3,7 +3,64 @@ Author :
 E-mail :
 */
 
-#demon p .note {
-	text-align: center;
-	font-size: 12px;
+#demon {
+	position: absolute;
+}
+div {
+	position: absolute;
+}
+.list {
+	position: absolute;
+}
+
+body * {
+	margin: 10px auto;
+}
+body > div {
+	margin: 10px auto;
+}
+.item + div {
+	margin: 10px auto;
+}
+.item ~ div {
+	margin: 10px auto;
+}
+
+.item[data-rule] {
+	padding: 10px;
+}
+.item[data-rule="title"] {
+	padding: 10px;
+}
+.item[data-rule~="title"] {
+	padding: 10px;
+}
+.item[data^="title"] {
+	padding: 10px;
+}
+.item[data$="title"] {
+	padding: 10px;
+}
+.item[data*="title"] {
+	padding: 10px;
+}
+.item[data|="title"] {
+	padding: 10px;
+}
+
+.item:nth-child(3) {
+	color: blue !important;
+}
+
+.item::before {
+	content: 'demon';
+}
+
+@keyframes moving {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }

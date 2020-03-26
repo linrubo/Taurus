@@ -3,14 +3,20 @@
 
 'use strict';
 (function () {
-	//Class
+	// Built-in Objects
 	var handler = new Function();
-	//ECMA Properties/function
+	// ECMA Properties
 	handler.prototype.name = '';
 	handler.call(null, 0);
-	//DOM Properties/function
+	Array.prototype.forEach.call([], function (item, index) {
+		console.log(item);
+		console.log(index);
+	});
+	// Host Objects
+	var image = new Image();
+	// DOM Related Properties
 	var body = document.body;
 	body.addEventListener('click', handler);
-	//BOM Properties/function
+	// Web APIs Properties
 	window.alert(navigator.userAgent);
 }());
